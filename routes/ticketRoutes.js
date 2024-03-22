@@ -5,4 +5,4 @@ const ticketRoutes = express.Router();
 
 ticketRoutes.post('/registerTicket', createTicket);
 
-export { ticketRoutesRoutes };
+export { ticketRoutes };

@@ -2,7 +2,7 @@ import Ticket from  '../models/registerTicket.js';
 //CREATE
     const createTicket = async (req, res) => {
         try{
-            const newTicket = await ticket.create(req.body);
+            const newTicket = await Ticket.create(req.body);
             res.json(newTicket);
         }
         catch(error){

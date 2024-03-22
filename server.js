@@ -7,6 +7,7 @@ import express from 'express'
 import { connect } from './config.js';
 import { userRoutes } from './routes/userRoutes.js';
 import { movieRoutes } from './routes/movieRoutes.js';
+import { ticketRoutes } from './routes/ticketRoutes.js';
 connect(); // Conecta a la base de datos
 
 const api  = express();
@@ -19,5 +20,5 @@ api.get('/test', (req, res) => {
     res.send('Hola mundo');
 });
 
-api.use(userRoutes, movieRoutes);// Agregamos las rutas al servidor
+api.use(userRoutes, movieRoutes, ticketRoutes);// Agregamos las rutas al servidor
 

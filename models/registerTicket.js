@@ -6,7 +6,7 @@ const ticketSchema = new mongoose.Schema({
     totalTickets : Number,
     priceTicket : Number,
     totalPrice : Number,
-    timeFunction : Date,
+    timeFunction : String,
     seats : String
 });
 
