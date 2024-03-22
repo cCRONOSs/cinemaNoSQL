@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     birthday:  Date,
     rol: String,
     phoneNumber: Number,
-    email: {type:String , unique : true},
+    email: String,
     password: String,
     username: String,
 });
