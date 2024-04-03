@@ -13,5 +13,8 @@ import Ticket from  '../models/registerTicket.js';
         }
 };
 //READ
-
-export { createTicket }
+   const getAllTickets = async (req, res) =>{
+            const tickets = await Ticket.find();
+            res.json(tickets);
+    }
+export { createTicket, getAllTickets }

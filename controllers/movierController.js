@@ -13,5 +13,9 @@ import Movie from    '../models/movie.js';
         }
 };
 //READ
+const getAllMovies = async (req, res) =>{
+    const movies = await Movie.find();
+    res.json(movies);
+};
 
-export { createMovie }
+export { createMovie, getAllMovies }
