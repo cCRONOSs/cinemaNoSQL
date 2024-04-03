@@ -13,8 +13,16 @@ import Ticket from  '../models/registerTicket.js';
         }
 };
 //READ
+//GET all tickets
    const getAllTickets = async (req, res) =>{
             const tickets = await Ticket.find();
             res.json(tickets);
     }
-export { createTicket, getAllTickets }
+
+//GET tickets by Client
+const getTicketByClient = async (req, res) => {
+    const ticket = await Ticket.find({ client : req.params.nameClient});
+    res.json(ticket);
+}
+
+export { createTicket, getAllTickets, getTicketByClient }
