@@ -18,4 +18,4 @@ import User from '../models/user.js'
         res.json(users);
     }
 
-export { createUser }
+export { createUser, getAllUser }
